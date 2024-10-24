@@ -24,8 +24,13 @@ namespace ValidatingPassword
             }
             else
             {
-                lblMessages.Text = "Password Invalid";
+                lblMessages.Text = "!Error: Enter a Valid Password";
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = '*';
         }
     }
 }

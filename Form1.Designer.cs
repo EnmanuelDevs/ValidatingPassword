@@ -32,6 +32,8 @@
             txtPassword = new TextBox();
             btnVerifying = new Button();
             lblMessages = new Label();
+            lblUser = new Label();
+            lblPassword = new Label();
             SuspendLayout();
             // 
             // txtUser
@@ -67,17 +69,38 @@
             lblMessages.TabIndex = 3;
             lblMessages.Text = "Show Messages";
             // 
+            // lblUser
+            // 
+            lblUser.AutoSize = true;
+            lblUser.Location = new Point(159, 137);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(41, 20);
+            lblUser.TabIndex = 4;
+            lblUser.Text = "User:";
+            // 
+            // lblPassword
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Location = new Point(127, 193);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(73, 20);
+            lblPassword.TabIndex = 5;
+            lblPassword.Text = "Password:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblPassword);
+            Controls.Add(lblUser);
             Controls.Add(lblMessages);
             Controls.Add(btnVerifying);
             Controls.Add(txtPassword);
             Controls.Add(txtUser);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -88,5 +111,7 @@
         private TextBox txtPassword;
         private Button btnVerifying;
         private Label lblMessages;
+        private Label lblUser;
+        private Label lblPassword;
     }
 }
